@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Cifra de César e base64</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <main><div class="container">
+        <h1>DECODIFICADOR</h1>
+        <hr>
+        <h3>&#x1f512 Base64 & cifra de césar &#x1f512</h3>
+        <form action="#">
+            <textarea name="mensagem" id="mensagem" cols="50" rows="4"> 
+                "Digite uma mensagem"</textarea>
+
+            <label id="selecione" for="select"></label>
+            <select name="select" class="select" id="select">
+                <option value="selecione">Selecione</option>
+                <option value="base64">Base64</option>
+                <option value="cifra">Cifra de César</option>
+            </select>
+              <div class="chave-container">
+                 <label class="chave" for="range">Escolha a chave</label>
+                 <div class="slider-range">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
+                    oninput="rangenumber.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                 </div>
+              </div>
+
+              <textarea id="resultado" class="mensagem resultado" cols="50" rows="4"> "Mensagem Criptografada"</textarea>
+                <div class="btn">
+                    <button>Codificar Mensagem!</button>
+                </div>
+             </form>
+        </div>
+    </main>
+</body>
+</html>
